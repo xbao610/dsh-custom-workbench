@@ -35,7 +35,7 @@ Then refresh the page (or restart `dsh web`). The row appears under the built-in
 dsh plugin --profile web add github:xbao610/dsh-custom-workbench
 ```
 
-`client.js` is committed, so a Git install needs no build step and runs no install script. A **private** repository installs only for accounts that can read it and have Git credentials configured (HTTPS with a token, or SSH).
+`client.js` is committed, so a Git install needs no build step and runs no install script. The repository is public, so anyone can install straight from it.
 
 **From npm, once published:** `dsh plugin --profile web add dsh-custom-workbench`.
 
