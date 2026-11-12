@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
+  <style>
+    :root { --dsh-panel-mark: #1f6f8b; }
+    @media (prefers-color-scheme: dark) { :root { --dsh-panel-mark: #6ec2d8; } }
+  </style>
+  <rect x="6" y="7" width="24" height="22" rx="5" fill="none" stroke="var(--dsh-panel-mark)" stroke-width="2.4"/>
+  <rect x="10" y="12" width="5.5" height="12" rx="2" fill="var(--dsh-panel-mark)"/>
+  <path d="M20 13.5h6M20 18h6M20 22.5h4" fill="none" stroke="var(--dsh-panel-mark)" stroke-width="2.4" stroke-linecap="round"/>
+</svg>

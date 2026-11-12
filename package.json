@@ -1,0 +1,61 @@
+{
+  "name": "dsh-custom-workbench",
+  "version": "1.0.0",
+  "description": "Adds a Custom workbench entry to the left sidebar: a board of note, command, and skill cards in the main column.",
+  "type": "module",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "src",
+    "scripts",
+    "locale/*.json",
+    "docs",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "node scripts/build.mjs"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-layout",
+        "@deepseek-ai/dsh-client-ui-sidebar"
+      ]
+    }
+  },
+  "license": "MIT",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "sidebar",
+    "workbench",
+    "notes"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xbao610/dsh-custom-workbench.git"
+  },
+  "homepage": "https://github.com/xbao610/dsh-custom-workbench#readme",
+  "bugs": {
+    "url": "https://github.com/xbao610/dsh-custom-workbench/issues"
+  }
+}

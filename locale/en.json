@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Custom workbench",
+    "description": "Adds a Custom workbench entry to the left sidebar that opens a board of cards in the main column. Add notes, shell commands, and skill references, then reorder, duplicate, or remove them. Cards are saved in this browser on this machine. The page is a global panel, so opening or leaving it never switches the current session."
+  }
+}
