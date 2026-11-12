@@ -10,7 +10,7 @@ This is a standard DSH bundle: its patch inserts one row, and that row carries b
 - **Cards in three kinds** — note, command, skill. Command cards render their body as a monospace block.
 - **Everything editable** — create, edit, duplicate, reorder (↑/↓), delete, and a "show on the board" switch per card.
 - **Filter and search** — kind chips plus a search box over title and body.
-- **Saved locally** — cards are stored in this browser's `localStorage`, so they survive a reload and a restart on the same machine. Nothing is sent anywhere.
+- **Saved locally** — cards live in the page's `localStorage` under the key `dsh-sidebar-panel:workbench`, so nothing is sent anywhere. In the desktop app the document origin is `dsh-app://app`, which stays the same across launches, so cards survive a refresh and a restart. In a plain browser (`dsh web`) the origin includes the port and the port is OS-assigned by default, so give it a fixed one (`dsh web --port 3080`) if cards must outlive a restart.
 - **Bilingual** — the row label, the page, and the plugin-list metadata follow the active locale (English and Simplified Chinese are bundled; the other locale files carry the plugin-list title and description).
 - **Light and dark** — every colour comes from the host's `--dsw-alias-*` theme tokens.
 
@@ -43,7 +43,7 @@ dsh plugin --profile web add github:xbao610/dsh-custom-workbench
 
 - A DSH build that declares the `sidebar.panellist` and `main` slots (the 0.2.x Web GUI). Verified against 0.2.2-rc.2.
 - No API key, no network access, and no Host service are used.
-- Cards live in one browser profile on one machine. There is no sync between browsers, machines, or user accounts, and clearing site data removes them.
+- Cards live in one app/browser profile on one machine, keyed by the page origin. There is no sync between browsers, machines, or user accounts, and clearing site data removes them.
 - Deleting the bundle removes the sidebar row; cards left in `localStorage` remain but are unreachable from the UI.
 
 ## Develop
